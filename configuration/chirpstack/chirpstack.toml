@@ -96,10 +96,3 @@
   #   openssl rand -base64 32
   secret="you-must-replace-this"
 
-
-[integration]
-  enabled=["mqtt"]
-
-  [integration.mqtt]
-    server="tcp://$MQTT_BROKER_HOST:1883/"
-    json=true
