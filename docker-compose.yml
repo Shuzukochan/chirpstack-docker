@@ -30,17 +30,6 @@ services:
     depends_on:
       - mosquitto
   
-  chirpstack-gateway-bridge-basicstation:
-    image: chirpstack/chirpstack-gateway-bridge:4
-    restart: unless-stopped
-    command: -c /etc/chirpstack-gateway-bridge/chirpstack-gateway-bridge-basicstation-as923_2.toml
-    ports:
-      - "3001:3001"
-    volumes:
-      - ./configuration/chirpstack-gateway-bridge:/etc/chirpstack-gateway-bridge
-    depends_on:
-      - mosquitto
-
   chirpstack-rest-api:
     image: chirpstack/chirpstack-rest-api:4
     restart: unless-stopped
